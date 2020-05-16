@@ -2,6 +2,9 @@ const cars = (state = [], action) => {
   if (action.type === "SET_CARS") {
     return action.payload;
   }
+  if (action.type === "ADD_CARS") {
+    return [...state, ...action.payload];
+  }
   if (action.type === "SET_CARS_HERE") {
     return state.map((car) => {
       const isOnTerritory = !!action.payload.find(

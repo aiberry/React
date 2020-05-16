@@ -1,0 +1,97 @@
+.root {
+  text-align: center;
+}
+
+table {
+  margin: 0 auto;
+  margin-top: 15px;
+  border: solid grey 1px;
+  padding: 12px;
+}
+
+.addButon {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.headerButton {
+  width: 100%;
+}
+
+.hideArrow {
+  opacity: 0;
+}
+
+.rotateArrow {
+  transform: rotate(180deg);
+}
+
+tbody td {
+  max-width: 180px;
+  border-bottom: solid black 1px;
+}
+
+.filter {
+  background: url(https://img.icons8.com/search) no-repeat 3px;
+  background-size: 20px 20px;
+  background-color: white;
+  padding-left: 25px;
+  height: 27px;
+  width: -webkit-fill-available;
+}
+
+.checkbox {
+  width: 17px;
+  height: 17px;
+}
+
+.checkboxReadOnly {
+  opacity: 0.5;
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1600px) {
+  table {
+    margin-top: 55px;
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1000px) {
+  table {
+    margin-top: 55px;
+  }
+  table th{
+    max-width: 175px;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 900px) {
+  table {
+    margin-top: 55px;
+  }
+  table th{
+    max-width: 155px;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 800px) {
+  table {
+    font-size: 15px;
+    margin-top: 55px;
+  }
+  table th{
+    max-width: 120px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  table {
+    font-size: 13px;
+    margin-top: 55px;
+  }
+  table th{
+    max-width: 110px;
+  }
+}
+
+

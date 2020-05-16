@@ -3,7 +3,7 @@ export const columns = {
   brand: "brand",
   model: "model",
   number: "number",
-  tenate: "tenate",
+  tenant: "tenant",
 };
 
 export const sortDirections = {

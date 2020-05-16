@@ -4,29 +4,30 @@ const defaultState = {
   [columns.brand]: sortDirections.none,
   [columns.model]: sortDirections.none,
   [columns.number]: sortDirections.none,
-  [columns.tenate]: sortDirections.none,
+  [columns.tenant]: sortDirections.none,
 };
 
-const sort = (state = defaultState, action) => {
+const sortBy = (state = defaultState, action) => {
   if (action.type === "SET_SORTING") {
-    if (state[action.payload.column] === sortDirections.up) {
-      return {
-        ...state,
-        [action.payload.column]: sortDirections.down,
-      };
+    switch (state[action.payload.column]) {
+      case sortDirections.up:
+        return {
+          ...state,
+          [action.payload.column]: sortDirections.down,
+        };
+      case sortDirections.down:
+        return {
+          ...state,
+          [action.payload.column]: sortDirections.up,
+        };
+      default:
+        return {
+          ...defaultState,
+          [action.payload.column]: sortDirections.up,
+        };
     }
-    if (state[action.payload.column] === sortDirections.down) {
-      return {
-        ...state,
-        [action.payload.column]: sortDirections.up,
-      };
-    }
-    return {
-      ...defaultState,
-      [action.payload.column]: sortDirections.up,
-    };
   }
   return state;
 };
 
-export default sort;
+export default sortBy;

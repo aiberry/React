@@ -10,7 +10,10 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import reducer from "./reducers";
 
-const store = createStore(reducer, composeWithDevTools(applyMiddleware(thunk)));
+export const store = createStore(
+  reducer,
+  composeWithDevTools(applyMiddleware(thunk))
+);
 
 ReactDOM.render(
   <React.StrictMode>
